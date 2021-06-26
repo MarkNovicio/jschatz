@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block title %}
+  <title>Jacob Schatz Website</title>
+  {% endblock %}
+  <meta charset="utf-8" />
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% load static %}
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="{% static '../static/styles.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="body-container">
+    <header>
+      <div id="hero-image-container">
+        <img id="header-logo" src="images/handsome_man.jpg" alt="hero image" />
+        <p class="name-container">Jacob Schatz</p>
+     <!--   
+        <ul>
+  
+          <li class="hero-first-name"><a> J </a></li>
+          <li class="hero-first-name"><a>A </a></li>
+          <li class="hero-first-name"><a>C </a></li>
+          <li class="hero-first-name"><a>O </a></li>
+          <li class="hero-first-name"><a>B</a></li>
+        </ul>
+        <ul>
+  
+          <li class="hero-last-name"><a> S </a></li>
+          <li class="hero-last-name"><a>C </a></li>
+          <li class="hero-last-name"><a>H </a></li>
+          <li class="hero-last-name"><a>A </a></li>
+          <li class="hero-last-name"><a>T</a></li>
+          <li class="hero-last-name"><a>Z</a></li>
+        </ul>
+        -->
+      </div>
+      <div id="group">
+        <nav id="nav-bar">
+          <ul>
+            <li class="nav-buttons" id="homeNav"><a href='/'>Home </a></li>
+            <li class="nav-buttons" id="homeNav"><a>| </a></li>
+            <li class="nav-buttons" id="aboutNav"><a  href="/about">About </a></li>
+            <li class="nav-buttons" id="homeNav"><a>| </a></li>
+            <li class="nav-buttons" id="contactNav"><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+  
+        <div id="social-media">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+            <a href="https://www.linkedin.com/in/jacob-schatz/" target="none"><path class="linkedin-icon" fill="white"
+              d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z" />
+            </a>
+          </svg>
+  
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+            <a href="http://twitter.com/jakecodes/" target="none"><path class="twitter-icon" fill="white"
+              d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z" />
+             </a>
+          </svg>
+        </div>
+  
+  
+    </header>
+  
+    <div id="container">
+        <section>
+            <main class="p-text">
+              <p class="about-me" id="first-p-tag" name="about">
+                Jacob started programming in 2006. He hasn't stopped since. He is
+                always writing code and coming up with crazy ideas. He spends most of
+                his time writing Javascript, HTML and CSS. He also enjoys writing many
+                other languages. He has written 2 books on Swift for Pearson. He has a
+                popular YouTube channel under a secret pseudonym. He has a degree in
+                piano performance and plays classical concerts frequently. Overall a
+                very nice guy.
+                </a></p>
+              <p class="about-me">
+                Jacob started at GitLab in 2015 as the first frontend engineer. He
+                went on to lead the frontend team, UX team, and lead an awesome data
+                science GitLab startup: Meltano. He has touched almost all parts of
+                GitLab in his time there. He came up with the idea for the WebIDE and
+                created the first prototype among other things.
+              </p>
+              <p class="about-me">
+                Jacob Schatz works at Netlify as the Product Engineering Manager.
+              </p>
+              <p class="about-me">
+                Jacob also speaks at conferences. He has spoken all over the world
+                about VueJS.
+              </p>
+      
+              <p class="about-me">
+                Jacob also loves working on electronics and creates really fun
+                electric vehicles. His goal in life is to use gas cars less and use
+                electric vehicles more.
+              </p>
+              <p id="last-p-tag" class="about-me">
+                Jacob is a proud member of Little People of America. Although he does
+                not have dwarfism himself, he has 2 sons who both have a very rare
+                form of dwarfism that affects 1 in 500,000 people in the world. <br />
+              </p>
+            </main>
+          </section>
+        </div>
