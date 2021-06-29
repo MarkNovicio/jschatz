@@ -1,5 +1,7 @@
 * {
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding:0;
 }
 
 div.body-container {
@@ -232,7 +234,7 @@ section#home-container {
 }
 
 .circle-1 {
-  background-image: url("../../images/Swift_logo.png");
+  background-image: url("/static/imagesimages/Swift_logo.png");
   background-size: auto 88%;
   background-color: rgba(255, 255, 255, 0.623);
 }
