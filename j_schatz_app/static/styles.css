@@ -62,14 +62,17 @@ ul .hero-last-name {
 */
 #group {
   display: flex;
+  margin-right: 20px;
 }
-#nav-bar ul {
+
+.nav-bar ul {
   display: inline-flex;
   justify-content: flex-end;
 }
 
-#nav-bar a {
+.nav-bar a {
   padding: 0 10px;
+  text-decoration: none;
 }
 
 #social-media {
