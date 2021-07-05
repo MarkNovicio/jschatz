@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.cor.mail import send_mail
+from django.core.mail import send_mail
 
 
 def index(request):
@@ -9,8 +9,7 @@ def about(request):
     return render(request, "about.html")
 
 def contact(request):
-    if request.method == "POST":
-        
+    
     return render(request, "contact.html")
 
 
