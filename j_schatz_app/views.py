@@ -17,9 +17,21 @@ def submit_user_message(request):
     if len(errors) > 0:
         for key, value in errors.items():
             messages.error(request, value)
-            
-    print(request.POST)
-    return redirect('/')
+        print(errors)
+        return redirect('/contact') messages.error(request, value)
+
+    else:
+        user = User.objects.create(
+            username = request.POST['username'],
+            email = request.POST['email'],
+            message = request.POST['message']
+        )
+
+        request.session['username'] = user.username
+        request.session['email']= user.email
+        request.session['message']= user.message
+        return redirect('/contact')
+
     
 
 
