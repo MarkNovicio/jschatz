@@ -13,8 +13,13 @@ def contact(request):
     return render(request, "contact.html")
 
 def submit_user_message(request):
-    if request.method == "GET":
-        return redirect('/')
+    errors = UserMessage.objects.basic_validator(request.POST)
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+            
+    print(request.POST)
+    return redirect('/')
     
 
 
