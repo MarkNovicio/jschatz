@@ -60,6 +60,7 @@
 
     <form action="/user/contact" name="contact" method="POST" class="contact-form"
       display="block">
+      {% csrf_token %}
       <p class="form-name" id="name_error">Name:</p>
       <input type="text" name="username" placeholder="username"><br>
       <p class="form-name" id="email_error">Email:</p>
