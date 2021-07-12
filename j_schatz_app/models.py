@@ -1,5 +1,5 @@
 from django.db import models
-
+import re
 # Create your models here.
 
 class UserMessageManager(models.Manager):
@@ -16,7 +16,7 @@ class UserMessageManager(models.Manager):
             errors['message'] = "Message should be at least 10 characters"
         
         return errors
-        
+
 class UserMessage(models.Model):
     username = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)

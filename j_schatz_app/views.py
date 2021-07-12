@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.core.mail import send_mail
 from .models import *
 
@@ -18,10 +19,10 @@ def submit_user_message(request):
         for key, value in errors.items():
             messages.error(request, value)
         print(errors)
-        return redirect('/contact') messages.error(request, value)
+        return redirect('/contact')
 
     else:
-        user = User.objects.create(
+        user = UserMessage.objects.create(
             username = request.POST['username'],
             email = request.POST['email'],
             message = request.POST['message']
