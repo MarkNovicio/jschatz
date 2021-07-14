@@ -31,7 +31,7 @@ def submit_user_message(request):
         request.session['username'] = user.username
         request.session['email']= user.email
         request.session['message']= user.message
-        return redirect('/contact')
+        return redirect('/')
 
     
 
