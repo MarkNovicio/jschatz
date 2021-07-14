@@ -12,8 +12,8 @@ class UserMessageManager(models.Manager):
         if len(post_data['username']) < 2:
             errors['username'] = "Username must have at least 2 characters"
 
-       # if len(post_data['message']):
-        #    errors['message'] = "Message should be at least 10 characters"
+        if len(post_data['message']) < 10:
+            errors['message'] = "Message should be at least 10 characters"
         
         return errors
 
