@@ -27,7 +27,15 @@ def submit_user_message(request):
             email = request.POST['email'],
             message = request.POST['message']
         )
+        ### Send an email
+        send_mail(
+           f'Message from {username}' , #subject
+           "This is an automatic messager" , #message
+            email , # from email
+           ['marknovicio@gmail.com'] , # To Email
+        )
 
+        
         request.session['username'] = user.username
         request.session['email']= user.email
         request.session['message']= user.message

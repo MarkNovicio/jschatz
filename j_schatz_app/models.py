@@ -26,7 +26,7 @@ class UserMessage(models.Model):
     objects = UserMessageManager()
 
     def __repr__(self):
-        return f'Name: {self.name} | email: {self.email} | message: {self.message}'
+        return f'Name: {self.username} | email: {self.email} | message: {self.message}'
 
 
     
