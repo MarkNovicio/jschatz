@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block title %}
+  <title>Jacob Schatz Website</title>
+  {% endblock %}
+  <meta charset="utf-8" />
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% load static %}
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="{% static '../static/styles.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="body-container">
+        <center>
+            <h2>Thanks {{username}}!</h2>
+            <p>Appreciate you sending me a message!</p>
+        </center>
+    </div>
+
+</body>

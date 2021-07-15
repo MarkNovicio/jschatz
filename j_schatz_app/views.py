@@ -39,7 +39,7 @@ def submit_user_message(request):
         request.session['username'] = user.username
         request.session['email']= user.email
         request.session['message']= user.message
-        return redirect('/')
+        return render(request, 'sent_email.html', {'username': username})
 
     
 
