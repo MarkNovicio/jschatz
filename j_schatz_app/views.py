@@ -21,7 +21,7 @@ def submit_user_message(request):
         print(errors)
         return redirect('/contact')
 
-    else:
+    if request.method == "POST":
         user = UserMessage.objects.create(
             username = request.POST['username'],
             email = request.POST['email'],
@@ -29,17 +29,18 @@ def submit_user_message(request):
         )
         ### Send an email
         send_mail(
-           f'Message from {username}' , #subject
-           "This is an automatic messager" , #message
-            email , # from email
-           ['marknovicio@gmail.com'] , # To Email
-        )
+            user.username , #subject
+            user.message , #message
+            user.email , # from email
+            ['marknovicio@gmail.com'], # To Email
+            fail_silently=False)
 
         
         request.session['username'] = user.username
         request.session['email']= user.email
         request.session['message']= user.message
-        return render(request, 'sent_email.html', {'username': username})
+        return render(request, 'sent_email.html', {'username': user.username})
+    
 
     
 
