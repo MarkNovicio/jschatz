@@ -22,6 +22,7 @@
 <body>
     <div class="body-container">
       <div class="message-container">
+        Speak your mind!
         <form action="/user/message" name="contact" method="POST" class="message-form"
       display="block">
 
@@ -34,7 +35,7 @@
         </ul>
         {% endif %}
         {% csrf_token %}
-      <p class="form-name" id="name_error">Name:</p>
+      <p class="form-name" id="name_error">Message:</p>
       <input type="text" name="username" placeholder="username"><br>
       <p class="form-name" id="email_error">Email:</p>
       <input type="email" name="email" placeholder="johndoe@gmail.com"><br>
