@@ -267,7 +267,7 @@ section#home-container {
   padding-bottom: 50px;
 }
 
-.contact-form {
+.contact-form, .message-form {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   text-align: left !important;

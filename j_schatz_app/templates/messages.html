@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block title %}
+  <title>Jacob Schatz Website</title>
+  {% endblock %}
+  <meta charset="utf-8" />
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% load static %}
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="{% static '../static/styles.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="body-container">
+      <div class="message-container">
+        <form action="/user/message" name="contact" method="POST" class="message-form"
+      display="block">
+
+      <div class="contact-container">
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li>{{message}}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% csrf_token %}
+      <p class="form-name" id="name_error">Name:</p>
+      <input type="text" name="username" placeholder="username"><br>
+      <p class="form-name" id="email_error">Email:</p>
+      <input type="email" name="email" placeholder="johndoe@gmail.com"><br>
+      <p class="form-name" id="message_error">Message:</p>
+      <textarea rows="10" cols="100" name="message" placeholder="Please enter text">
+      </textarea>
+      <div class="form-group">
+        <input type="submit" name="submit-button" class="btn" value="Submit">
+      </div>
+    </div>
+    </form>
+      </div>
+
+    </div>
+</body>
