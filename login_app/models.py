@@ -9,3 +9,7 @@ class User(model.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
     objects = UserManager()
+
+    def __repr__(self):
+        return f'Name: {self.first_name} | email: {self.last_name} | message: {self.email}'
+
