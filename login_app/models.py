@@ -21,7 +21,7 @@ class UserManager(models.Manager):
             errors['password_match'] = "Password does not match"
 
         if not email_regex.match(post_data['email']):
-            errors['email'] = "Invalid email address!")
+            errors['email'] = "Invalid email address!"
 
         return errors
     
