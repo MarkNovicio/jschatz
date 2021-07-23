@@ -7,22 +7,21 @@ class UserManager(models.Manager):
         errors = {}
 
         email_regex = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-        if not email_regex.match(post_data['email']):
-            errors['email'] = "Invalid email address!"
             
         if len(post_data['first_name']) < 2:
             errors['first_name'] = "First name should be at least 2 characters long"
         
         if len(post_data['last_name']) < 2:
             errors['last_name'] = "Last name should be at least 2 characters long"
-        
+            
+        if not email_regex.match(post_data['email']):
+            errors['email'] = "Invalid email address!"
+
         if len(post_data['password']) < 8:
             errors['password'] = "Password should be at least 8 charcters long"
         
         if post_data['password'] != post_data['confirm_password']:
             errors['password_match'] = "Password does not match"
-
-        
 
         return errors
     
