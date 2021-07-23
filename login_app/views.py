@@ -19,6 +19,12 @@ def register_user(request):
             messages.error(request, value)
         print(errors)
 
-        return redirect('/')
+        return redirect('/registration')
     
+    else:
+        # if the errors object is empty, that means there were no errors!
+        # retrieve the blog to be updated, make the changes, and save
+        print("user is good")
+    
+    return redirect('/')
 
