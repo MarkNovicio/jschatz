@@ -21,7 +21,8 @@ class UserManager(models.Manager):
             errors['password'] = "Password must contain 8 characters"
         if len(post_data['password']) < 0:
             errors['password'] = "Password must contain 8 characters"
-        
+        if post_data['confirm_pw'] != post_data['password']:
+            errors['confirm_pw'] = "Confirm Password must match Password"
         return errors
     
 
