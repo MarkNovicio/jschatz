@@ -9,7 +9,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static '../static/styles1.css' %}"
+      href="{% static '../static/main.css' %}"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +17,13 @@
 </head>
 <body>
     <div class = "container">
+        <div class = "form-container">
+        <center>Sign up to join an epic website</center>
+        
         {% for message in messages %}
-            <p>{{message}}</p>
+            <p class = "error-messages">{{message}}</p>
         {% endfor %}
 
-        <h1>Sign up to join an epic website</h1>
-        {% for message in messages %}
-        <p>{{message}}</p>
-        {% endfor %}
         <form action= '/user/registration' method="POST">
             {% csrf_token %}
             <div class= "registration-item-form">
@@ -46,6 +45,7 @@
                 <button>Submit</button>
             </div>
         </form>
+        </div>
     </div>
     
 </body>
