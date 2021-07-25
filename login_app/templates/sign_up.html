@@ -18,12 +18,12 @@
 <body>
     <div class = "container">
         <div class = "form-container">
-        <center>Sign up to join an epic website</center>
-        
-        {% for message in messages %}
-            <p class = "error-messages">{{message}}</p>
-        {% endfor %}
-
+        <h1 class= "form-title">Sign up to join an epic website</h1>
+        <div class = "error-messages-container">
+            {% for message in messages %}
+                <p class = "error-messages">{{message}}</p>
+            {% endfor %}
+        </div>
         <form action= '/user/registration' method="POST">
             {% csrf_token %}
             <div class= "registration-item-form">

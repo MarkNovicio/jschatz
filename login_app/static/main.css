@@ -5,13 +5,22 @@
   }
 .form-container{
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+}
+
+.form-title{
+  margin-bottom: 30px;
+}
+.error-messages-container{
+  margin-bottom: 30px;
 }
 .error-messages{
-  color: red;
+  color: red; 
 }
   div.registration-item-form {
       display: flex;
       justify-content:center;
+      margin-bottom: 5px;
   }
