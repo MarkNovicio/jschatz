@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block title %}
+    <title>Jacob Schatz Webpage</title>
+    {% endblock %}
     <meta charset="UTF-8">
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '../static/styles1.css' %}"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    {% for message in messages %}
+    <div class = "container">
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+
+        <h1>Sign up to join an epic website</h1>
+        {% for message in messages %}
         <p>{{message}}</p>
-    {% endfor %}
-
-    <h1>Sign up to join an epic website</h1>
-    <form action= '/user/registration' method="POST">
-        {% csrf_token %}
-        <input type='text' name= 'first_name' placeholder = 'First Name'>
-        <input type='text'name = 'last_name' placeholder = 'Last Name'>
-        <input type="email" name = 'email' placeholder = 'Email'>
-        <input type="password" name = 'password' placeholder = 'Password'>
-        <input type = "password" name = 'confirm_pw' placeholder = 'Confirm Password'>
-        <button>Submit</button>
-
-    </form>
+        {% endfor %}
+        <form action= '/user/registration' method="POST">
+            {% csrf_token %}
+            <div class= "registration-item-form">
+                <input type='text' name= 'first_name' placeholder = 'First Name'>
+            </div>
+            <div class= "registration-item-form">
+                <input type='text'name = 'last_name' placeholder = 'Last Name'>
+            </div>
+            <div class= "registration-item-form">
+                <input type="email" name = 'email' placeholder = 'Email'>
+            </div>
+            <div class= "registration-item-form">    
+                <input type="password" name = 'password' placeholder = 'Password'>
+            </div>
+            <div class= "registration-item-form">
+                <input type = "password" name = 'confirm_pw' placeholder = 'Confirm Password'>
+            </div>
+            <div class= "registration-item-form">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
     
 </body>
 </html>
