@@ -28,19 +28,18 @@
         </div>
         <form action= '/user/registration' method="POST">
             {% csrf_token %}
-            <div class="section">First & Last Name</div>
+            <div class="section"><span>1</span>First & Last Name</div>
             <div class= "registration-item-form">
                 <input type='text' name= 'first_name' placeholder = 'First Name'>
                 <input type='text'name = 'last_name' placeholder = 'Last Name'>
             </div>
-            <div class="section">Email</div>
+            <div class="section"><span>2</span>Email</div>
             <div class= "registration-item-form">
                 <input type="email" name = 'email' placeholder = 'Email'>
             </div>
+            <div class="section"><span>3</span>Passwords</div>
             <div class= "registration-item-form">    
                 <input type="password" name = 'password' placeholder = 'Password'>
-            </div>
-            <div class= "registration-item-form">
                 <input type = "password" name = 'confirm_pw' placeholder = 'Confirm Password'>
             </div>
             <div class= "registration-item-form">
