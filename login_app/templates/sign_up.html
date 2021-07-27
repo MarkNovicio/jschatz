@@ -11,6 +11,8 @@
       type="text/css"
       href="{% static '../static/main.css' %}"
     />
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -18,7 +20,7 @@
 <body>
     <div class = "container">
         <div class = "form-container">
-        <h1 class= "form-title">Sign up to join an epic website</h1>
+        <h1 class= "form-title">Sign up Now! <span>Sign up to join an EPIC website</span></h1>
         <div class = "error-messages-container">
             {% for message in messages %}
                 <p class = "error-messages">{{message}}</p>
@@ -26,12 +28,12 @@
         </div>
         <form action= '/user/registration' method="POST">
             {% csrf_token %}
+            <div class="section">First & Last Name</div>
             <div class= "registration-item-form">
                 <input type='text' name= 'first_name' placeholder = 'First Name'>
-            </div>
-            <div class= "registration-item-form">
                 <input type='text'name = 'last_name' placeholder = 'Last Name'>
             </div>
+            <div class="section">Email</div>
             <div class= "registration-item-form">
                 <input type="email" name = 'email' placeholder = 'Email'>
             </div>
