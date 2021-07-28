@@ -20,8 +20,14 @@
 <body>
     <div class = "container">
         <div class = "form-container">
-        <div class ="login"><a href= "/login_page"> Login </a> </div>
-        <h1 class= "form-title">Sign up Now! <span>Sign up to join an EPIC website</span></h1>
+        <div class = "title-container">
+            <div class = "title-container-left">
+                <h1 class= "form-title">Sign up Now! </h1>
+                <p>Sign up to join an EPIC website</p>
+            </div>
+            <div class = "title-container-right"><a href= "/login_page"> Brotherhood Member </a>
+            </div>
+        </div>
         <div class = "error-messages-container">
             {% for message in messages %}
                 <p class = "error-messages">{{message}}</p>
