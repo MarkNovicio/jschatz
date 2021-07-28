@@ -28,3 +28,8 @@ def register_user(request):
     
     return redirect('/')
 
+def login_page(request):
+    return render(request, "login.html")
+    
+
+
