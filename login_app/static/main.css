@@ -66,9 +66,16 @@ h1 span{
   }
 
   div.registration-item-form input {
-    border-color: #808080;
-    border-width: 1px;
-    width: 75%;
+    border:1px solid #808080;
+    padding: 8px 130px 8px 20px;
+    margin:4px 10px 4px 10px;
+	border-radius: 5px;
+    color: #808080;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	font: normal 15px 'Bitter', serif;
     font-size: 1.5en;
   }
 
@@ -78,7 +85,7 @@ h1 span{
     margin-bottom: 5px;
   }
 
-  div.registration-item-form button {
+  div.registration-item-form-button button {
     background: #2A88AD;
     padding: 8px 20px 8px 20px;
     border-radius: 5px;
@@ -94,7 +101,7 @@ h1 span{
     font-size: 15px;
   }
 
-  div.registration-item-form button:hover {
+  div.registration-item-form-button button:hover {
     background: #2A6881;
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
