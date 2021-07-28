@@ -20,7 +20,20 @@
 <body>
     <div class = "login-container">
         <h1 class = "form-title">Thou hast the key... Must enter with will</h1>
+        <p><a href="/registration">Join the Brotherhood</a></p>
+        <form action= '/user/registration' method="POST">
+            {% csrf_token %}
 
+            <div class= "registration-item-form">
+                <input type='text' name= 'first_name' placeholder = 'Epic Name'>
+            </div>
+            <div class= "registration-item-form">    
+                <input type="password" name = 'password' placeholder = 'Password'>
+            </div>
+            <div class= "registration-item-form-button">
+                <button>SIGN IN</button>
+            </div>
+        </form>
 
     </div>
 </body>
