@@ -31,5 +31,8 @@ def register_user(request):
 def login_page(request):
     return render(request, "login.html")
     
+def forgot_password_page(request):
+    return render(request, "forgot_password.html")
+    
 
 

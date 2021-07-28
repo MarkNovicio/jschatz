@@ -33,10 +33,19 @@
   font-size: .9rem;
 }
 
+
 .form-title{
 	color: #fff;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
 	font: normal 30px 'Bitter', serif;	
+}
+.home-button {
+  color: #fff;
+
+}
+p a.sign-up {
+  text-decoration: none;
+  color: #fff;
 }
 
 form {
@@ -118,4 +127,9 @@ form {
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
   }
 
-
+  div.login-container {
+    margin: 0;
+    background: url(/static/images/sunlit_path_in_forest.jpg) no-repeat center
+      center fixed;
+    background-size: cover;
+  }
