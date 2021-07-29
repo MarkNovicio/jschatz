@@ -1,6 +1,8 @@
 from django.db import models
 import re
 
+
+
 class UserManager(models.Manager):
     def basic_validator(self, post_data):
         errors={}
@@ -24,7 +26,7 @@ class UserManager(models.Manager):
         if post_data['confirm_pw'] != post_data['password']:
             errors['confirm_pw'] = "Confirm Password must match Password"
         return errors
-    
+        
 
 class User(models.Model):
     first_name = models.CharField(max_length=40)
