@@ -34,15 +34,23 @@
 }
 
 
-.form-title{
+h1.form-title{
 	color: #fff;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
 	font: normal 30px 'Bitter', serif;	
 }
-.home-button {
+a.home-button {
   color: #fff;
+  text-decoration: none;
 
 }
+
+a.home-button:link {
+  color: #fff;
+  text-decoration: none;
+
+}
+
 p a.sign-up {
   text-decoration: none;
   color: #fff;

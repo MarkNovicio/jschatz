@@ -1,7 +1,7 @@
 from django.db import models
 import re
 
-
+import bcrypt
 
 class UserManager(models.Manager):
     def basic_validator(self, post_data):
@@ -27,6 +27,12 @@ class UserManager(models.Manager):
             errors['confirm_pw'] = "Confirm Password must match Password"
         return errors
         
+    def authenticate(self, email, password):
+        users = self.filter(email = email)
+        if not users:
+            return False
+        user = users[0] 
+        return bcrypt.checkpw(password.encode(), user.password.encode()) 
 
 class User(models.Model):
     first_name = models.CharField(max_length=40)

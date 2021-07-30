@@ -19,20 +19,13 @@
 </head>
 <body>
     <div class = "login-container">
-        <div class = "home-button"> <a href = "/">Home</a> </div>
+        <div> <a class = "home-button" href = "/">Home</a> </div>
         <h1 class = "form-title">Thou hast the key... Must enter with will</h1>
-        <p><a href="/registration">Join the Brotherhood</a></p>
+        <p><a class = "home-button" href="/registration">Join the Brotherhood</a></p>
+        {% if messages %}
+              {{messages}}
+        {% endif %}
         <form action= '/user/login' method="POST">
-            
-            {% if signin_messages %}
-            <ul class="signin_messages">
-                {% for message in signin_messages %}
-                <li {% if message.tags %} class="{{message.tags}}" {% endif %}>
-                  {{message}}
-                </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
             {% csrf_token %}
             <div class= "registration-item-form">
                 <input type='email' name= 'email' placeholder = 'Epic Name'>
@@ -40,7 +33,7 @@
             <div class= "registration-item-form">    
                 <input type="password" name = 'password' placeholder = 'Password'>
             </div>
-            <div class = "forgot_password"> <a href = "/forgot_password_page">Forgot Password</a> </div>
+            <div class = "forgot_password"> <a class = "home-button" href = "/forgot_password_page">Forgot Password</a> </div>
             <div class= "registration-item-form-button">
                 <button>SIGN IN</button>
             </div>
