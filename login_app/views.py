@@ -43,10 +43,11 @@ def login_page(request):
     return render(request, "login.html")
 
 def login(request):
+    signin_messages = messages
     try:
         user = Users.objects.get(email = request.POST['email'])
     except:
-        messages.error(request, "Invalid email or password")
+        signin_messages.error(request, "Invalid email or password")
         return redirect('/login_page')
     
     if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
@@ -56,7 +57,7 @@ def login(request):
         request.session['email']= user.email
         return redirect('/')
     
-    messages.error(request, "Incorrect email address or password.")
+    signin_messages.error(request, "Incorrect email address or password.")
     return redirect('/login_page')
     
 def forgot_password_page(request):

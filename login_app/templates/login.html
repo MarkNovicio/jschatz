@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block title %}
+    {% block content %}
     <title>Jacob Schatz Webpage</title>
-    {% endblock %}
+    
     <meta charset="UTF-8">
     {% load static %}
     <link
@@ -22,10 +22,19 @@
         <div> <a class = "home-button" href = "/">Home</a> </div>
         <h1 class = "form-title">Thou hast the key... Must enter with will</h1>
         <p><a class = "home-button" href="/registration">Join the Brotherhood</a></p>
-        {% if messages %}
-              {{messages}}
-        {% endif %}
+
         <form action= '/user/login' method="POST">
+            <div class="signin-messages-container">
+                {% if signin_messages %}
+                <ul class="signin_messages">
+                  {% for message in signin_messages %}
+                  <li {% if message.tags %} class="{{message.tags}}" {% endif %}>
+                    {{message}}
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
             {% csrf_token %}
             <div class= "registration-item-form">
                 <input type='email' name= 'email' placeholder = 'Epic Name'>
@@ -41,4 +50,5 @@
         
 
     </div>
+    {% endblock %}
 </body>
