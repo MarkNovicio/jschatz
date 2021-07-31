@@ -27,11 +27,11 @@
             <div class="signin-messages-container">
                 {% if signin_messages %}
                 <ul class="signin_messages">
-                  {% for message in signin_messages %}
-                  <li {% if message.tags %} class="{{message.tags}}" {% endif %}>
-                    {{message}}
+
+                  <li {% if signin_messages.tags %} class="{{signin_messages.tags}}" {% endif %}>
+
                   </li>
-                  {% endfor %}
+    
                 </ul>
                 {% endif %}
               </div>
