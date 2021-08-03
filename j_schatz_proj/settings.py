@@ -126,7 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 
 #SMTP Configuration
 #myaccount.google.com/lesssecureapps
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'th3arclearningcenter@gmail.com'

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import *
-
+#from django.contrib.auth import views
 import bcrypt
 
 
@@ -59,9 +59,8 @@ def login(request):
     
     signin_messages.error(request, "Incorrect email address or password.")
     return redirect('/login_page')
-    
-def forgot_password_page(request):
-    return render(request, "forgot_password.html")
+
+
 
 
 
