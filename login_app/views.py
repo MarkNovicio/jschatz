@@ -43,47 +43,22 @@ def login_page(request):
     return render(request, "login.html")
 
 def login(request):
-    signin_messages = messages
+  
     try:
-        if request.method == 'POST':
-            email = request.POST.get('email')
-            password = request.POST.get('password')
-            #user = Users.objects.get(email = request.POST['email'])
-            if not email or not password:
-                messages.success(request, 'Both Username and Password are required.')
-                return redirect('/login_page')
-            user_email = User.objects.filter(email = email).first()
-            if user_email is None:
-                message.success(request, 'User not found.')
-                return redirect('/login_page')
-            
-            user = authenticate(username = username, password = password)
-
-            if user is None:
-                message.success(request, "Wrong password")
-                return redirect('/login_page')
-            
-            login(request, user)
-            return redirect('/')
+        user = Users.objects.get(email = request.POST['email'])
+    except:
+        messages.error(request, "Invalid email or password")
+        return redirect('/login_page')
     
-    except Exception as e:
-        print(e)
-    return render(request, 'login.html')
-
-
-    # except:
-    #     signin_messages.error(request, "Invalid email or password")
-    #     return redirect('/login_page')
+    if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
+        request.session['user_id'] = user.id
+        request.session['first_name']= user.first_name
+        request.session['last_name']=user.last_name
+        request.session['email']= user.email
+        return redirect('/success')
     
-    # if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
-    #     request.session['user_id'] = user.id
-    #     request.session['first_name']= user.first_name
-    #     request.session['last_name']=user.last_name
-    #     request.session['email']= user.email
-    #     return redirect('/')
-    
-    # signin_messages.error(request, "Incorrect email address or password.")
-    # return redirect('/login_page')
+    messages.error(request, "Incorrect email address or password.")
+    return redirect('/login_page')
 
 
 

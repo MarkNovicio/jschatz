@@ -46,3 +46,10 @@ class User(models.Model):
     def __repr__(self):
         return f'Name: {self.first_name} | email: {self.last_name} | message: {self.email}'
 
+class Profile(models.Model):
+    email = models.OneToOneField(User, on_delete=models.CASCADE)
+    forget_password_token = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username
