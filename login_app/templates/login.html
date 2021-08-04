@@ -24,18 +24,15 @@
         <p><a class = "home-button" href="/registration">Join the Brotherhood</a></p>
 
         <form action= '/user/login' method="POST">
+            {% csrf_token %}
             <div class="signin-messages-container">
-                {% if signin_messages %}
-                <ul class="signin_messages">
-
-                  <li {% if signin_messages.tags %} class="{{signin_messages.tags}}" {% endif %}>
-
-                  </li>
-    
-                </ul>
+                {% if messages %}
+                {% for message in messages %}
+                <div>{{message}}</div>
+                {% endfor %}
                 {% endif %}
               </div>
-            {% csrf_token %}
+            
             <div class= "registration-item-form">
                 <input type='email' name= 'email' placeholder = 'Epic Name'>
             </div>
