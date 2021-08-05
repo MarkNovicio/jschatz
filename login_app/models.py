@@ -44,7 +44,7 @@ class User(models.Model):
 
     objects = UserManager()
     def __repr__(self):
-        return f'Name: {self.first_name} | email: {self.last_name} | message: {self.email}'
+        return f'First Name: {self.first_name} | Last name: {self.last_name} | email: {self.email} | password: {self.password}'
 
 class Profile(models.Model):
     email = models.OneToOneField(User, on_delete=models.CASCADE)

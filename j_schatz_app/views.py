@@ -41,7 +41,8 @@ def submit_user_message(request):
         request.session['message']= user.message
         return render(request, 'sent_email.html', {'username': user.username})
     
-
+def success_page(request):
+    return render(request, "success.html")
     
 
 
