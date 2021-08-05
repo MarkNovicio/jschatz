@@ -11,9 +11,10 @@ def registration_form(request):
     return render(request, "sign_up.html")
 
 def register_user(request):
-    if request.method == 'GET':
-        return redirect('/')
     errors = User.objects.basic_validator(request.POST)
+
+    if request.method == 'GET':
+        return redirect('/')   
 
     if len(errors) > 0:
         #This code should render the error messages in the
@@ -43,11 +44,11 @@ def login_page(request):
     return render(request, "login.html")
 
 def login(request):
-  
     try:
-        user = Users.objects.get(email = request.POST['email'])
+        user = User.objects.get(email = request.POST['email'])
+        
     except:
-        messages.error(request, "Invalid email or password")
+        messages.error(request, "Invalid email or password!!!!")
         return redirect('/login_page')
     
     if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
@@ -57,7 +58,7 @@ def login(request):
         request.session['email']= user.email
         return redirect('/success')
     
-    messages.error(request, "Incorrect email address or password.")
+    messages.error(request, "Incorrect email address or passworddddddd.")
     return redirect('/login_page')
 
 
