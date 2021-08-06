@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from .models import *
+from login_app.models import *
 
 def index(request):
     return render(request, "index.html")
@@ -42,7 +43,15 @@ def submit_user_message(request):
         return render(request, 'sent_email.html', {'username': user.username})
     
 def success_page(request):
-    return render(request, "success.html")
+    if 'user_id' in request.session:
+        context = {
+            "user": User.objects.get(id = request.session['user_id'])
+        }
+
+        return render(request, "success.html", context)
+    else:
+        return redirect('/user/registration') #login page
+
     
 
 
