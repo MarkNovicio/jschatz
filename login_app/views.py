@@ -34,7 +34,6 @@ def register_user(request):
             email = request.POST['email'],
             password = pw_hash
         )
-
         # if the errors object is empty, that means there were no errors!
         # retrieve the blog to be updated, make the changes, and save
   
@@ -44,30 +43,6 @@ def login_page(request):
     return render(request, "login.html")
 
 def login(request):
-    # try:
-    #     if request.method == "POST":
-    #         email = request.POST.get('email')
-    #         password = request.POST.get('password')    
-
-    #         if not username or not password:
-    #             messages.error(request, "Invalid email or password!!!!")   
-    #             return redirect('/login_page')
-
-    #         user_obj = User.objects.filter(username = username).first()
-    #         if user_obj is None:
-    #             messages.error(request, "User not found")   
-    #             return redirect('/login_page')
-            
-    #         user = authenticate(email = email, password = password)
-
-    #         if user is None:
-    #             messages.error(request, "Wrong password")   
-    #             return redirect('/login_page')
-    #         login(request, user)
-    #         return redirect('/success')
-    # except Exception as e:
-    #     print(e)
-    # return render(request, 'login')
     try:
         user = User.objects.get(email = request.POST['email'])
         
@@ -76,10 +51,13 @@ def login(request):
         return redirect('/login_page')
     
     if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
-        print(request.POST['password'])
         logged_users = User.objects.filter(email=request.POST['email'])
         user_login_success = logged_users[0]
         print(user_login_success)
+        request.session['user_id'] = user.id
+        request.session['first_name']= user.first_name
+        request.session['last_name']=user.last_name
+        request.session['email']= user.email
         return redirect('/success')
     
     messages.error(request, "Incorrect email address or passworddddddd.")
@@ -87,6 +65,16 @@ def login(request):
 
 
 
+def logout(request):
+    if "user_id" in request.session:
+        del request.session['user_id']
+    if "first_name" in request.session:
+        del request.session['first_name']
+    if "last_name" in request.session:
+        del request.session['last_name']
+    if "email" in request.session:
+        del request.session['email']
+    return redirect('/')
 
 
 

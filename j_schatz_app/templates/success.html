@@ -23,7 +23,7 @@
       <div class="header-courses">
         <div id="left-header">Harbor International</div>
         <div id="right-header">
-          <p class="user">Signed in as {{user.email}}</p>
+          <p class="user">Signed in as {{request.session.email}}</p>
           <p class="user">|</p>
           <a id="log-out" href="/user/logout">log off</a>
         </div>
@@ -31,9 +31,9 @@
       <section class="course-description-container">
         <div class="course-description">
           <p>
-            Welcome {{user.first_name}}! 
+            Welcome {{request.session.first_name}}! 
           </p>
-          <a href="/users/logout">Leave the brotherhood</a>
+          <a href="/user/logout">Leave the brotherhood</a>
           <div>
             <p>Joined: {{user.created_at}}</p>
           </div>
