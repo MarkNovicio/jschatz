@@ -55,7 +55,8 @@ def success_page(request):
        # return render(request, "success.html", context)
     # else:
     #     return redirect('/user/registration') #login page
-
+def post_challenge(request):
+    return render(request, "list_challenges.html")
     
 
 
