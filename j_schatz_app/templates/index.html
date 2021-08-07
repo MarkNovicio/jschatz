@@ -22,28 +22,15 @@
 <body>
   <div class="body-container">
   <header>
+    <div>
+    {% block content %}
+
+    {% endblock %}
+  </div>
     <div id="hero-image-container">
       <img id="header-logo" src="images/handsome_man.jpg" alt="hero image" />
       <p class="name-container">Jacob Schatz</p>
-   <!--   
-      <ul>
 
-        <li class="hero-first-name"><a> J </a></li>
-        <li class="hero-first-name"><a>A </a></li>
-        <li class="hero-first-name"><a>C </a></li>
-        <li class="hero-first-name"><a>O </a></li>
-        <li class="hero-first-name"><a>B</a></li>
-      </ul>
-      <ul>
-
-        <li class="hero-last-name"><a> S </a></li>
-        <li class="hero-last-name"><a>C </a></li>
-        <li class="hero-last-name"><a>H </a></li>
-        <li class="hero-last-name"><a>A </a></li>
-        <li class="hero-last-name"><a>T</a></li>
-        <li class="hero-last-name"><a>Z</a></li>
-      </ul>
-      -->
     </div>
     <div id="group">
       <nav class="nav-bar">
@@ -58,6 +45,7 @@
           <li class="nav-buttons" id="homeNav"><a>| </a></li>
           <li class="nav-buttons" id="contactNav"><a href="/contact">Contact</a></li>
         </ul>
+
       </nav>
 
       <div id="social-media">
