@@ -56,7 +56,11 @@ def success_page(request):
     # else:
     #     return redirect('/user/registration') #login page
 def post_challenge(request):
-    return render(request, "list_challenges.html")
+    context = {
+        "post_challenge": CodeChallenge.objects.all()
+    }
+
+    return render(request, "list_challenges.html", context)
     
 
 

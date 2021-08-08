@@ -44,7 +44,8 @@ class UserMessage(models.Model):
 class CodeChallenge(models.Model):
     title = models.CharField(max_length = 50)
     challenge_question = models.TextField()
-    creator = models.ForeignKey(User, related_name = 'code_challenges', on_delete = models.CASCADE)
+    creator = models.ForeignKey(User, related_name = 'code_challenges', 
+    on_delete = models.CASCADE)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     objects = CodeChallengeManager()
