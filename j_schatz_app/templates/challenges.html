@@ -3,7 +3,7 @@
 <head>
     {% block content %}
     <title>Jacob Schatz Webpage</title>
-    
+    {% endblock %}
     <meta charset="UTF-8">
     {% load static %}
     <link
@@ -19,5 +19,6 @@
 </head>
 
 <body>
-    
+    <p>Welcome {{user.first_name}}</p>
+    <div>{{post_challenge.title}}</div>
 </body>
