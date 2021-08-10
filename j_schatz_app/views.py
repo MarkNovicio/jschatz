@@ -43,24 +43,28 @@ def submit_user_message(request):
         return render(request, 'sent_email.html', {'username': user.username})
     
 def success_page(request):
-    if 'user_id' not in request.session:
-        messages.error(request, "Please log in.")
-        return redirect('/user/login')
-    return render(request, "success.html")
-    # if 'user_id' in request.session:
-    #     context = {
-    #         "user": User.objects.get(id = request.session['user_id'])
-    #     }
+    # if 'user_id' not in request.session:
+    #     messages.error(request, "Please log in.")
+    #     return redirect('/user/login')
 
-       # return render(request, "success.html", context)
-    # else:
-    #     return redirect('/user/registration') #login page
+    if 'user_id' in request.session:
+        context = {
+            "user": User.objects.get(id = request.session['user_id']),
+            "post_challenge": CodeChallenge.objects.all()
+        }
+
+        return render(request, "success.html", context)
+    else:
+        return redirect('/user/registration') #login page
 def post_challenge(request):
-    context = {
-        "post_challenge": CodeChallenge.objects.all()
-    }
+    if 'user_id' in request.session:
+            
+        context = {
+            "post_challenge": CodeChallenge.objects.all(),
+            "user": User.objects.get(id = request.session['user_id'])
+        }
 
-    return render(request, "list_challenges.html", context)
+        return redirect('/success')
     
 
 
