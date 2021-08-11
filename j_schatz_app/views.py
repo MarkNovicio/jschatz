@@ -49,14 +49,23 @@ def success_page(request):
 
     if 'user_id' in request.session:
         context = {
-            "user": User.objects.get(id = request.session['user_id']),
-            "post_challenge": CodeChallenge.objects.all()
+            "user": User.objects.get(id = request.session['user_id'])
         }
 
         return render(request, "success.html", context)
     else:
         return redirect('/user/registration') #login page
+
 def post_challenge(request):
+    if 'user_id' in request.session:
+        CodeChallenge.objects.create(
+        title = request.POST['title'],
+        challenge_question = request.POST['challenge_question']
+        )
+
+        return redirect('/challenges')
+
+def challenge(request):
     if 'user_id' in request.session:
             
         context = {
@@ -64,7 +73,7 @@ def post_challenge(request):
             "user": User.objects.get(id = request.session['user_id'])
         }
 
-        return redirect('/success')
+        return render(request, 'challenges.html', context)
     
 
 
