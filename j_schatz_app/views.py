@@ -57,13 +57,22 @@ def success_page(request):
         return redirect('/user/registration') #login page
 
 def post_challenge(request):
-    if 'user_id' in request.session:
+    errors = CodeChallenge.objects.basic_validator(request.POST)
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+            print('pass')
+            print(CodeChallenge.objects.get(id = request.session['user_id']))
+        return redirect('/success')
+    
+    else:    
         CodeChallenge.objects.create(
         title = request.POST['title'],
-        challenge_question = request.POST['challenge_question']
+        challenge_question = request.POST['challenge_question'],
+        publisher = CodeChallenge.objects.get(id = request.session['user_id'])
         )
 
-        return redirect('/challenges')
+    return redirect('/user/challenges')
 
 def challenge(request):
     if 'user_id' in request.session:
