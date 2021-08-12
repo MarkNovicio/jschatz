@@ -62,14 +62,14 @@ def post_challenge(request):
         for key, value in errors.items():
             messages.error(request, value)
             print('pass')
-            print(CodeChallenge.objects.get(id = request.session['user_id']))
+            print(User.objects.get(id = request.session['user_id']))
         return redirect('/success')
     
     else:    
         CodeChallenge.objects.create(
         title = request.POST['title'],
         challenge_question = request.POST['challenge_question'],
-        publisher = CodeChallenge.objects.get(id = request.session['user_id'])
+        publisher = User.objects.get(id = request.session['user_id'])
         )
 
     return redirect('/user/challenges')
