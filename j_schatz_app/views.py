@@ -74,16 +74,14 @@ def post_challenge(request):
 
     return redirect('/user/challenges')
 
-def challenge(request):
-    if 'user_id' in request.session:
-            
-        context = {
-            "post_challenge": CodeChallenge.objects.all(),
-            "user": User.objects.get(id = request.session['user_id'])
-        }
+def challenge(request):     
+    context = {
+        "challenges": CodeChallenge.objects.all(),
+        "user": User.objects.get(id = request.session['user_id'])
+    }
 
-        return render(request, 'challenges.html', context)
-    
+    return render(request, 'challenges.html', context)
+
 
 
 
