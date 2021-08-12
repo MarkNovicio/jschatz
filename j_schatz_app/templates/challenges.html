@@ -20,5 +20,17 @@
 
 <body>
     <p>Welcome {{user.first_name}}</p>
-    <div>{{post_challenge.title}}</div>
+    {% for challenge in challenges %}
+    <ul>
+        <li>
+            <p><a href="/snacks/{{snack.id}}">{{challenge.title}} </a>by: <a href="/snack_publisher/{{snack.publisher.id}}">{{challenge.publisher.first_name}} {{challenge.publisher.last_name}}</a>
+                {% if request.session.user_id == challenge.publisher.id %}
+                <button><a href="/snacks/{{snack.id}}/delete">Delete</a></button>
+                {% endif %}
+            </p>
+            <p>{{challenge.description}}</p>
+                    
+        </li>
+    </ul>
+    {% endfor %}
 </body>
