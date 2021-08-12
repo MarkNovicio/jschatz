@@ -42,10 +42,9 @@ class UserMessage(models.Model):
         return f'Name: {self.username} | email: {self.email} | message: {self.message}'
 
 class CodeChallenge(models.Model):
+    publisher = models.ForeignKey(User, related_name='codechallenges', on_delete=models.CASCADE)
     title = models.CharField(max_length = 50)
     challenge_question = models.TextField()
-    creator = models.ForeignKey(User, related_name = 'code_challenges', 
-    on_delete = models.CASCADE)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
     objects = CodeChallengeManager()
