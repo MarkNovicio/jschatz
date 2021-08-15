@@ -7,5 +7,6 @@ urlpatterns = [
     path('user/contact', views.submit_user_message),
     path('success', views.success_page),
     path('user/post_challenge', views.post_challenge),
-    path('user/challenges', views.challenge)
+    path('user/challenges', views.challenge),
+    path('coding_challenges/<int:challenge_id>', views.coding_challenges)
 ]
