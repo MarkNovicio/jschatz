@@ -8,5 +8,6 @@ urlpatterns = [
     path('success', views.success_page),
     path('post_challenge', views.post_challenge),
     path('post_challenge/challenges', views.challenge),
-    path('post_challenge/coding_challenges/<int:challenge_id>', views.coding_challenges)
+    path('post_challenge/coding_challenges/<int:challenge_id>', views.coding_challenges),
+    path('post_challenge/challenge_publisher/<int:publisher_id>', views.code_publisher)
 ]

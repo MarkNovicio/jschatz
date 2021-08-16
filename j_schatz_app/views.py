@@ -90,5 +90,11 @@ def coding_challenges(request, challenge_id):
 
     return render(request, "coding_challenge.html", context)
 
+def code_publisher(request, publisher_id):
 
+    context = {
+        "user": User.objects.get(id = request.session['user_id']),
 
+    }
+
+    return render(request, "code_publisher.html", context)
