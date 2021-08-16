@@ -9,6 +9,13 @@
 <body>
     <p>Welcome {{user.first_name}} {{user.last_name}}</p>
     <a href="/user/logout">Log Out</a>
+    {% if user.codechallenges.all.count == 1 %}
+    <div>{{user.codechallenges.all.count}} coding question</div>
+
+    {% else %}
     <div>{{user.codechallenges.all.count}} coding questions</div>
+    {% endif %}
+
+    
 </body>
 </html>
