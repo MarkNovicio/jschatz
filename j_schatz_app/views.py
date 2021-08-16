@@ -72,7 +72,7 @@ def post_challenge(request):
         publisher = User.objects.get(id = request.session['user_id'])
         )
 
-    return redirect('/user/challenges')
+    return redirect('/post_challenge/challenges')
 
 def challenge(request):     
     context = {
@@ -82,6 +82,13 @@ def challenge(request):
 
     return render(request, 'challenges.html', context)
 
+def coding_challenges(request, challenge_id):
+    context = {
+        "user": User.objects.get(id = request.session['user_id']),
+        "challenge": CodeChallenge.objects.get(id=challenge_id)
+    }
+
+    return render(request, "coding_challenge.html", context)
 
 
 

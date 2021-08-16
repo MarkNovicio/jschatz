@@ -21,10 +21,12 @@
 <body>
     <p>Welcome {{user.first_name}}</p>
     <a href="/user/logout">Log Out</a>
+    <h1> List of Code Challenge Questions </h1>
     {% for challenge in challenges %}
+    
     <ul>
         <li>
-            <p><a href="/challenges/{{challenge.id}}">{{challenge.title}} </a>by: <a href="/challenge_publisher/{{challenge.publisher.id}}">{{challenge.publisher.first_name}} {{challenge.publisher.last_name}}</a>
+            <p><a href="/post_challenge/coding_challenges/{{challenge.id}}">{{challenge.title}} </a>by: <a href="/post_challenge/challenge_publisher/{{challenge.publisher.id}}">{{challenge.publisher.first_name}} {{challenge.publisher.last_name}}</a>
                 {% if request.session.user_id == challenge.publisher.id %}
                 <button><a href="/snacks/{{snack.id}}/delete">Delete</a></button>
                 {% endif %}
