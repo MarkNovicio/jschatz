@@ -41,7 +41,7 @@
       <div class = "login-container">
         <div> <a class = "home-button" href = "/">Home</a> </div>
         <h1 class = "form-title">Post Coding Challenge</h1>
-        <form action= '/user/post_challenge' method="POST">
+        <form action= '/post_challenge' method="POST">
             {% csrf_token %}
             <div class="signin-messages-container">
                 {% if messages %}
