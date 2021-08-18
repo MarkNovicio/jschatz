@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <p>Welcome {{user.first_name}}</p>
+    <a href="/user/logout">Log Out</a>
+
+ 
     <p>Welcome {{user.first_name}} {{user.last_name}}</p>
     <a href="/user/logout">Log Out</a>
     {% if user.codechallenges.all.count == 1 %}
