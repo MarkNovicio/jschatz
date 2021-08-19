@@ -82,7 +82,7 @@ def challenge(request):
 
     return render(request, 'challenges.html', context)
 
-def coding_challenges(request, challenge_id):
+def single_coding_challenge(request, challenge_id):
     context = {
         "user": User.objects.get(id = request.session['user_id']),
         "challenge": CodeChallenge.objects.get(id=challenge_id)
