@@ -84,7 +84,6 @@ def challenge(request):
 
 def single_coding_challenge(request, challenge_id):
     context = {
-        "user": User.objects.get(id = request.session['user_id']),
         "challenge": CodeChallenge.objects.get(id=challenge_id)
     }
 
@@ -93,8 +92,9 @@ def single_coding_challenge(request, challenge_id):
 def code_publisher(request, publisher_id):
 
     context = {
-        "user": User.objects.get(id = request.session['user_id']),
-
+        "user": User.objects.get(id = publisher_id)
     }
 
     return render(request, "code_publisher.html", context)
+
+#def delete_challenge(request,challenge_id):
