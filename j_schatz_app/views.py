@@ -97,4 +97,8 @@ def code_publisher(request, publisher_id):
 
     return render(request, "code_publisher.html", context)
 
-#def delete_challenge(request,challenge_id):
+def delete_challenge(request,challenge_id):
+    del_challenge = CodeChallenge.objects.get(id=challenge_id)
+    del_challenge.delete()
+
+    return redirect('/post_challenge/challenges')
