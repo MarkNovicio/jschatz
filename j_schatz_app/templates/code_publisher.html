@@ -23,6 +23,11 @@
     {% for challenge in user.codechallenges.all %}
     <p><a href="/post_challenge/coding_challenges/{{challenge.id}}">{{challenge.title}} </a>
     {% endfor %}
-
+    
+    {% if request.session.user_id == user.id %}
+    <form>
+        <h2>Edit profile</h2>
+    </form>
+    {% endif %}
 </body>
 </html>
