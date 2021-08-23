@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{user.first_name}} {{user.last_name}} Profile</title>
 </head>
 <body>
     <p>Welcome {{user.first_name}}</p>
@@ -14,12 +14,15 @@
     <p>Welcome {{user.first_name}} {{user.last_name}}</p>
     <a href="/user/logout">Log Out</a>
     {% if user.codechallenges.all.count == 1 %}
-    <div>{{user.codechallenges.all.count}} coding question</div>
+    <div>{{user.codechallenges.all.count}} Coding Challenge</div>
 
     {% else %}
-    <div>{{user.codechallenges.all.count}} coding questions</div>
+    <div>{{user.codechallenges.all.count}} Coding Challenges</div>
     {% endif %}
 
-    
+    {% for challenge in user.codechallenges.all %}
+    <p><a href="/post_challenge/coding_challenges/{{challenge.id}}">{{challenge.title}} </a>
+    {% endfor %}
+
 </body>
 </html>
