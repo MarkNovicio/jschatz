@@ -25,8 +25,29 @@
     {% endfor %}
     
     {% if request.session.user_id == user.id %}
-    <form>
-        <h2>Edit profile</h2>
+    <h2>Edit profile</h2>
+    <form action= '/user/update' method="POST">
+        {% csrf_token %}
+        <div class= "registration-item-form">
+            <input type='text' name= 'first_name' placeholder = 'First Name'>
+            <input type='text'name = 'last_name' placeholder = 'Last Name'>
+        </div>
+
+        <div class= "registration-item-form">
+            <input type="email" name = 'email' placeholder = 'Email'>
+        </div>
+
+        <div class= "registration-item-form">   
+            <input type="password" name = 'current_password' placeholder = 'Current Password'> 
+            <input type="password" name = 'new_password' placeholder = 'New Password'>
+            <input type="password" name = 'confirm_new_pw' placeholder = 'Confirm Password'>
+        </div>
+            <textarea rows="10" cols="100" name="challenge_question" placeholder="Please enter challenge question">
+            </textarea>
+        <div class= "registration-item-form-button">
+            <button>POST</button>
+        </div>
+    </form>
     </form>
     {% endif %}
 </body>
