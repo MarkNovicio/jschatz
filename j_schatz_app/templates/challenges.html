@@ -27,6 +27,7 @@
     
     <ul>
         <li>
+            <p><a href="/post_challenge/coding_challenges/{{challenge.id}}">{{challenge.title}} </a>
                 by: <a href="/post_challenge/challenge_publisher/{{challenge.publisher.id}}">{{challenge.publisher.first_name}} {{challenge.publisher.last_name}}</a>
                 {% if request.session.user_id == challenge.publisher.id %}
                 <button><a href="/post_challenge/coding_challenges/{{challenge.id}}/delete">Delete</a></button>

@@ -103,3 +103,7 @@ def delete_challenge(request,challenge_id):
         del_challenge.delete()
     
     return redirect('/post_challenge/challenges')
+
+def update_user(request):
+
+    return redirect(f"/post_challenge/challenge_publisher/{request.session['user_id']}")
