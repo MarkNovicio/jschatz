@@ -34,6 +34,12 @@ class UserManager(models.Manager):
         user = users[0] 
         return bcrypt.checkpw(password.encode(), user.password.encode()) 
 
+    def edit_validator(self, post_data, user):
+        errors = {}
+        email_regex = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
+
+        return errors
+
 class User(models.Model):
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)

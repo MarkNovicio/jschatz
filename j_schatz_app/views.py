@@ -105,5 +105,6 @@ def delete_challenge(request,challenge_id):
     return redirect('/post_challenge/challenges')
 
 def update_user(request):
-
+    user = User.objects.get(id = request.session['user_id'])
+    errors = User.objects.edit_validator(request.POST, user)
     return redirect(f"/post_challenge/challenge_publisher/{request.session['user_id']}")
