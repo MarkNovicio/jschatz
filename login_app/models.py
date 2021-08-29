@@ -37,7 +37,9 @@ class UserManager(models.Manager):
     def edit_validator(self, post_data, user):
         errors = {}
         email_regex = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-
+        if not bcrypt.checkpw(post_data['current_password'].encode(), user.password.encode()):
+            errors['password'] = "Password does not match"
+            return redirect("/login_page")    
         return errors
 
 class User(models.Model):
