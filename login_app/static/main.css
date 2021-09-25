@@ -38,14 +38,17 @@ h1.form-title{
 	color: #fff;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
 	font: normal 30px 'Bitter', serif;	
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
-.home-button {
+.register-button {
   color: #fff;
   text-decoration: none;
 
+
 }
 
-a.home-button:link {
+a.register-button:link {
   color: #fff;
   text-decoration: none;
 
@@ -69,13 +72,14 @@ form {
   margin-bottom: 30px;
 }
 .error-messages{
-  color: red; 
+  color: #ff0000; 
 }
   div.registration-item-form {
     padding: 30px;
-    background: #F8F8F8;
+    background-color: rgba(32, 32, 32, 0.55);
     border-radius: 6px;
     margin-bottom: 15px;
+  
   }
 
   form .section span {
@@ -141,9 +145,19 @@ form {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100px;
+  
   }
+.home-button, .form-title {
+  padding-left: 30px;
 
+}
+
+.home-button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
   .background-color {
-    background-color: rgba(255, 255, 255, 0.28);
+    background-color: rgba(32, 32, 32, 0.4);
   }
