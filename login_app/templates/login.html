@@ -22,9 +22,10 @@
         <div class ="background-color">
         <div> <a class = "home-button" href = "/">Home</a> </div>
         <h1 class = "form-title">Thou hast the key... Must enter with will</h1>
-        <p><a class = "home-button" href="/registration">Join the Brotherhood</a></p>
+        
 
         <form action= '/user/login' method="POST">
+            <p><a class = "register-button" href="/registration">Join the Brotherhood</a></p>
             {% csrf_token %}
             <div class="signin-messages-container">
                 {% if messages %}
@@ -40,7 +41,7 @@
             <div class= "registration-item-form">    
                 <input type="password" name = 'password' placeholder = 'Password'>
             </div>
-            <div class = "forgot_password"> <a class = "home-button" href = "/reset_password">Forgot Password</a> </div>
+            <div class = "forgot_password"> <a class = "reset-button" href = "/reset_password">Forgot Password</a> </div>
             <div class= "registration-item-form-button">
                 <button>SIGN IN</button>
             </div>
