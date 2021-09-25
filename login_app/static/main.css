@@ -145,7 +145,9 @@ form {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-  
+    position:fixed;
+    width: 100%;
+    height: 100%;
   }
 .home-button, .form-title {
   padding-left: 30px;
@@ -161,3 +163,21 @@ form {
   .background-color {
     background-color: rgba(32, 32, 32, 0.4);
   }
+
+.password-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+
+  .forgot-password a {
+    color: #fff;
+    text-decoration: none;
+  }
+  div.forgot-password{
+    margin-top: 4px;
+  }
+
+
+
