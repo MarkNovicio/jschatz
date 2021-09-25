@@ -5,10 +5,14 @@
 }
 
 div.body-container {
+  position:fixed;
   margin: 0;
-  background: url(/static/images/updated_desert_photo_Copy.jpg) no-repeat center
-    center fixed;
-  background-size: cover;
+  background: url(/static/images/macbook_grey_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  width: 100%;
+    height: 100%;
 }
 header {
   display: flex;
@@ -310,23 +314,6 @@ input[type="text"] {
 .form-name {
   color: white;
   margin-bottom: 1.5%;
-}
-
-.btn {
-  background-color: #fcfcfc;
-  color: #000;
-
-  width: 18%;
-  font-family: Arial;
-  font-size: 20px;
-  padding: 10px;
-  margin-top: 5%;
-}
-
-.btn:hover {
-  background: #6079886b;
-  cursor: pointer;
-  color: #fff;
 }
 
 @media (max-width: 2079px) {
