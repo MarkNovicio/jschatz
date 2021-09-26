@@ -141,7 +141,7 @@ form {
 
   div.container {
     margin: 0;
-    background: url(/static/images/sunlit_path_in_forest.jpg);
+    background: url(/static/images/macbook_grey_wallpaper.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -151,7 +151,17 @@ form {
   }
 .home-button, .form-title {
   padding-left: 30px;
+}
 
+.login-container{
+  margin: 0;
+  background: url(/static/images/sunlit_path_in_forest.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position:fixed;
+  width: 100%;
+  height: 100%;
 }
 
 .home-button {
