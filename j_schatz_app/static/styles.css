@@ -7,7 +7,7 @@
 div.body-container {
   position:fixed;
   margin: 0;
-  background: url(/static/images/macbook_grey_wallpaper.jpg);
+  background: url(/static/images/mountains.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -74,10 +74,7 @@ ul .hero-last-name {
   justify-content: flex-end;
 }
 
-.nav-bar a {
-  padding: 0 10px;
-  text-decoration: none;
-}
+
 
 #social-media {
   display: inline-flex;
@@ -104,15 +101,12 @@ img#linkedin-icon {
 }
 */
 
-.nav-buttons {
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: bold;
-  list-style-type: none;
+#social-media{
+  padding: 10px;
 }
-nav a:hover {
-  color: blue;
-  cursor: pointer;
+a.link{
+  color:#fff;
+  text-decoration: none;
 }
 
 .linkedin-icon {
