@@ -237,20 +237,34 @@ section#home-container {
 .circle-1 {
   background-image: url("../static/images/Swift_logo.png");
   background-size: auto 88%;
-  background-color: rgba(255, 255, 255, 0.623);
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 .circle-2 {
   background-image: url("../static/images/vue_js_logo.png");
   background-size: auto 100%;
-  background-color: rgba(255, 255, 255, 0.623);
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 .circle-3 {
-  background-image: url("../static/images/netlify_logo.png");
+  background-image: url("../static/images/rust_logo.png");
   background-size: auto 100%;
-  background-color: rgba(255, 255, 255, 0.623);
+  background-color: rgba(255, 255, 255, 0.45);
 }
+
+.circle-4 {
+  background-image: url("../static/images/Python_logo.png");
+  background-size: auto 100%;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+
+.circle-5 {
+  background-image: url("../static/images/go_logo.png");
+  background-size: auto 100%;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
 
 .about-me {
   margin: 0 20%;
