@@ -293,8 +293,8 @@ textarea {
 
 #footer-section {
   position: fixed;
-  height: 2.5%;
-  background: #b2b9bd;
+  height: 50px;
+  background: rgba(34, 34, 34, 0.7);
   font-size: 15px;
   color: #000;
   text-align: center;
@@ -355,6 +355,7 @@ input[type="text"] {
   #hero-image-container {
     display: flex;
     align-items: center;
+    margin-left: 0;
   }
 
   #header-logo {

@@ -139,7 +139,7 @@ form {
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
   }
 
-  div.login-container {
+  div.container {
     margin: 0;
     background: url(/static/images/sunlit_path_in_forest.jpg);
     background-repeat: no-repeat;
