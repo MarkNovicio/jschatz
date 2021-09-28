@@ -223,11 +223,12 @@ section#home-container {
   background-repeat: no-repeat;
   font-size: 1.5em;
 }
-.home-items a {
+
+/* .home-items a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-weight: bold;
-}
+} */
 .home-items:hover {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.923);
@@ -242,27 +243,31 @@ section#home-container {
 
 .circle-2 {
   background-image: url("../static/images/vue_js_logo.png");
-  background-size: auto 100%;
+  background-size: auto 80%;
   background-color: rgba(255, 255, 255, 0.45);
+  background-position: center center;
 }
 
 .circle-3 {
   background-image: url("../static/images/rust_logo.png");
-  background-size: auto 100%;
   background-color: rgba(255, 255, 255, 0.45);
+  background-size: auto 80%;
+  background-position: center center;
 }
 
 .circle-4 {
   background-image: url("../static/images/Python_logo.png");
-  background-size: auto 100%;
   background-color: rgba(255, 255, 255, 0.45);
+  background-size: auto 80%;
+  background-position: center center;
 }
 
 
 .circle-5 {
   background-image: url("../static/images/go_logo.png");
-  background-size: auto 100%;
   background-color: rgba(255, 255, 255, 0.45);
+  background-size: auto 95%;
+  background-position: center center;
 }
 
 

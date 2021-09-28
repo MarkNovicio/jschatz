@@ -22,8 +22,6 @@
     <div class="container">
       <div class="header-courses">
         <div id="right-header">
-          <p class="user">Signed in as {{user.email}}</p>
-          <p class="user">|</p>
           <a id="log-out" href="/user/logout">log off</a>
         </div>
       </div>
@@ -37,10 +35,10 @@
           </div>
         </div>
       </section>
-      <div class = "login-container">
+      <div class = "coding-challenge-container">
         <div> <a class = "home-button" href = "/">Home</a> </div>
         <h1 class = "form-title">Post Coding Challenge</h1>
-        <form action= '/post_challenge' method="POST">
+        <form class= "form-container-post-challenge" action= '/post_challenge' method="POST">
             {% csrf_token %}
             <div class="signin-messages-container">
                 {% if messages %}
@@ -49,12 +47,12 @@
                 {% endfor %}
                 {% endif %}
               </div>
-            <div>Title of Code Challenge</div>
+            <div class ="code-challenge">Title of Code Challenge</div>
             <div class= "registration-item-form">
                 <input type='text' name= 'title'>
             </div>
-               
-              <textarea rows="10" cols="100" name="challenge_question" placeholder="Please enter challenge question">
+            <div class ="code-challenge">Enter Coding Challange Below</div>
+              <textarea rows="10" cols="50" name="challenge_question" placeholder="Please enter challenge question">
               </textarea>
             <div class= "registration-item-form-button">
                 <button>POST</button>
