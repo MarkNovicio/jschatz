@@ -21,22 +21,19 @@
   <body>
     <div class="container">
       <div class="header-courses">
-        <div id="right-header">
-          <a id="log-out" href="/user/logout">log off</a>
+        <div id="header">
+          <div> <a class = "home-button" href = "/">Home</a> </div>
+          <div class="right-header">
+          <p class="login-user">
+            WELCOME {{user.first_name}} {{user.last_name}} {{user.id}}! 
+          </p>
+          <a id="log-out" href="/user/logout">Log Off</a>
+        </div>
         </div>
       </div>
-      <section class="course-description-container">
-        <div class="course-description">
-          <p>
-            Welcome {{user.first_name}} {{user.last_name}} {{user.id}}! 
-          </p>
-          <a href="/users/logout">Leave the brotherhood</a>
-          <div>
-          </div>
-        </div>
-      </section>
+
       <div class = "coding-challenge-container">
-        <div> <a class = "home-button" href = "/">Home</a> </div>
+        
         <h1 class = "form-title">Post Coding Challenge</h1>
         <form class= "form-container-post-challenge" action= '/post_challenge' method="POST">
             {% csrf_token %}
@@ -54,14 +51,14 @@
             <div class ="code-challenge">Enter Coding Challange Below</div>
               <textarea rows="10" cols="50" name="challenge_question" placeholder="Please enter challenge question">
               </textarea>
-            <div class= "registration-item-form-button">
+            <div class= "form-footer">
                 <button>POST</button>
+                <div class="view-challenge"><a href ="/post_challenge/challenges">View Challenges</a></div>
             </div>
         </form>
-
-        <div><a href ="/post_challenge/challenges">View Challenges</a></div>
+      </div>
 <p>https://unsplash.com/photos/jqjoc3O6iVU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</p>
-    </div>
+ 
 
     </div>
   </body>
