@@ -28,9 +28,9 @@
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 }
 
-.title-container-right a{
+.title-container-right a, #header a{
   text-decoration: none;
-  font-size: .9rem;
+  color: #fff;
 }
 
 
@@ -45,10 +45,22 @@ h1.form-title{
 .register-button {
   color: #fff;
   text-decoration: none;
-
-
 }
 
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.right-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+p.login-user{
+  color: #fff;
+  margin-right: 20px;
+}
 a.register-button:link {
   color: #fff;
   text-decoration: none;
@@ -117,7 +129,7 @@ form {
     margin-bottom: 5px;
   }
 
-  div.registration-item-form-button button {
+  div.registration-item-form-button button, .form-footer button {
     background: #2A88AD;
     padding: 8px 20px 8px 20px;
     border-radius: 5px;
@@ -200,7 +212,10 @@ form {
   font-size: 1.2rem;
 color: #fff;
 }
-
+.form-footer{
+  display: flex;
+  justify-content: space-between;
+}
 textarea {
   margin-bottom: 10px;
 }
@@ -208,6 +223,16 @@ textarea {
     color: #fff;
     text-decoration: none;
   }
+
+.view-challenge{
+  
+  margin-top:6px;
+}
+
+.view-challenge a {
+  color: #fff;
+  text-decoration: none;
+}
   div.forgot-password{
     margin-top: 4px;
   }
