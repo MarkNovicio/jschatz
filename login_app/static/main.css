@@ -28,7 +28,7 @@
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 }
 
-.title-container-right a, #header a{
+.title-container-right a, .header a{
   text-decoration: none;
   color: #fff;
 }
@@ -47,14 +47,22 @@ h1.form-title{
   text-decoration: none;
 }
 
-#header {
+.header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
 }
+
+.left-header {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 30px;
+}
+
 .right-header {
   display: flex;
   justify-content: space-around;
+  margin-right: 30px;
 }
 
 p.login-user{
@@ -62,7 +70,7 @@ p.login-user{
   margin-right: 20px;
 }
 a.register-button:link {
-  color: #fff;
+  color: #fff;border-top: none;
   text-decoration: none;
 
 }
@@ -94,6 +102,10 @@ form {
     margin-bottom: 15px;
   
   }
+a.link {
+  color: #fff;
+  text-decoration: none;
+}
 
   form .section span {
     background: #2A88AD;
@@ -162,9 +174,6 @@ form {
     width: 100%;
     height: 100%;
   }
-.home-button {
-  padding-left: 30px;
-}
 
 .login-container{
   margin: 0;
@@ -177,11 +186,13 @@ form {
   height: 100%;
 }
 
-.home-button {
+.left-header .btn {
   color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
   margin-bottom: 30px;
+  padding-right: 7px;
+
 }
   .background-color {
     background-color: rgba(32, 32, 32, 0.4);
@@ -229,7 +240,7 @@ textarea {
   margin-top:6px;
 }
 
-.view-challenge a {
+.view-challenge a, div.code-submitter a {
   color: #fff;
   text-decoration: none;
 }
@@ -237,5 +248,44 @@ textarea {
     margin-top: 4px;
   }
 
+.challenges-container{
+  background-color: #6d6d6d;
+}
 
+div.code-challenge-list-container{
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
 
+p.code-challenge-list a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+p.code-challenge-list{
+  margin-left:  30px;
+  color: rgb(247, 78, 78);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+div.code-submitter{
+  margin-left: 30px;
+}
+
+.code-submitter button{
+  background: #fc3029;
+  padding: 3px 11px 3px 11px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  font: normal 30px 'Bitter', serif;
+  -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+  border: 1px solid #257C9E;
+  font-size: 12.5px;
+  margin-left: 12px;
+}
