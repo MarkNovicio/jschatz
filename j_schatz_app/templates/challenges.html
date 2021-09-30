@@ -19,23 +19,42 @@
 </head>
 
 <body>
-    <p>Welcome {{user.first_name}}</p>
-    <a href="/user/logout">Log Out</a>
-    <div><a href= '/success'>Post a challenge</a></div>
-    <h1> List of Code Challenge Questions </h1>
+    <div class="challenges-container">
+    <div class="header-courses">
+        <div class="header">
+          <div class="left-header"> 
+            <a class = "btn" href = "/">Home</a> 
+            <a class="btn" href="/about">About </a>
+            <a class="btn" href="/contact">Contact</a>
+        </div>
+
+          <div class="right-header">
+          <p class="login-user">
+            WELCOME {{user.first_name}} {{user.last_name}}! 
+          </p>
+          <a id="log-out" href="/user/logout">Log Off</a>
+        </div>
+        </div>
+      </div>
+
+    <h1 class="form-title"> List of Code Challenge Questions </h1>
     {% for challenge in challenges %}
     
+    <div class="code-challenge-list-container">
     <ul>
         <li>
-            <p><a href="/post_challenge/coding_challenges/{{challenge.id}}">{{challenge.title}} </a>
-                by: <a href="/post_challenge/challenge_publisher/{{challenge.publisher.id}}">{{challenge.publisher.first_name}} {{challenge.publisher.last_name}}</a>
+            <p class="code-challenge-list"> <a href="/post_challenge/coding_challenges/{{challenge.id}}">{{challenge.title}} </a></p>
+            <div class="code-submitter">
+                Submitted by: <a href="/post_challenge/challenge_publisher/{{challenge.publisher.id}}">{{challenge.publisher.first_name}} {{challenge.publisher.last_name}}</a>
                 {% if request.session.user_id == challenge.publisher.id %}
                 <button><a href="/post_challenge/coding_challenges/{{challenge.id}}/delete">Delete</a></button>
                 {% endif %}
-            </p>
+            </div>
             <p>{{challenge.description}}</p>
                     
         </li>
     </ul>
+</div>
     {% endfor %}
+</div>
 </body>
