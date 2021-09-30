@@ -20,12 +20,18 @@
 
   <body>
     <div class="container">
+      <div class="background-color">
       <div class="header-courses">
         <div class="header">
-          <div> <a class = "home-button" href = "/">Home</a> </div>
+          <div class="left-header"> 
+            <a class = "btn" href = "/">Home</a> 
+            <a class="btn" href="/about">About </a>
+            <a class="btn" href="/contact">Contact</a>
+        </div>
+
           <div class="right-header">
           <p class="login-user">
-            WELCOME {{user.first_name}} {{user.last_name}} {{user.id}}! 
+            WELCOME {{user.first_name}} {{user.last_name}}! 
           </p>
           <a id="log-out" href="/user/logout">Log Off</a>
         </div>
@@ -59,7 +65,7 @@
       </div>
 <p><a class ="link" href="https://unsplash.com/photos/jqjoc3O6iVU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Image Link</a></p>
  
-
+</div>
     </div>
   </body>
 </html>

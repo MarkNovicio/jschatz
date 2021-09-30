@@ -2,15 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static '../static/main.css' %}"
+  />
     <title>{{challenge.title}} Question Challenge</title>
 </head>
-<body>
-    <p>Welcome {{user.first_name}}</p>
-    <div><a href ="/post_challenge/challenges">Back to Coding Challenges</a></div>
-    <div><a href="/user/logout">Log Out</a></div>
+<body> 
+    <div class="container">
+    <div class="header-courses">
+    <div class="header">
+      <div class="left-header"> 
+        <a class="btn" title="Home" href = "/">Home</a> 
+        <a class="btn" title="About" href="/about">About </a>
+        <a class="btn" title="Coding Challenges" href ="/post_challenge/challenges">Coding Challenges</a>
+        <a class="btn" title="Contact" href="/contact">Contact</a>
+    </div>
+
+      <div class="right-header">
+      <p class="login-user">
+        WELCOME {{user.first_name}} {{user.last_name}}! 
+      </p>
+      
+      <a id="log-out" href="/user/logout">Log Off</a>
+    </div>
+    </div>
+  </div>
+   
+    
+    
     <center>{{challenge.title}}</center>
     <p>{{challenge.challenge_question}}</p>
+    </div>
 </body>
 </html>

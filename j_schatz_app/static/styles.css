@@ -89,17 +89,6 @@ img#twitter-icon {
 img#linkedin-icon {
   width: 20%;
 }
-/*
-#nav-bar ul{
-  display: flex;
-  justify-content: space-between;
-
-}
-
-#nav-bar ul a{
-  padding: 0 10%;
-}
-*/
 
 #social-media{
   padding: 10px;
@@ -119,86 +108,6 @@ a.link{
   cursor: pointer;
 }
 
-/*
-#header-section{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-section#header-section {
-  color: #fff;
-  height: 15%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 2px 2px 2px  rgb(241, 239, 239);
-}
-/*
-#nav-bar {
- 
-  text-align: center;
-}
-
-nav a::before {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 100%;
-  background-color: #bd0707;
-  position: relative;
-  bottom: -4px;
-  width: 0%;
-}
-
-nav a:hover::before {
-  width: 100%;
-}
-
-ul {
-  margin: 0;
-  display: flex;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  color: #fff;
-}
-
-li a {
-  text-decoration: none;
-}
-
-.nav-buttons {
-  padding: 0 20px;
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#social-media {
-  fill: #fff;
-
-  height: 1.7rem;
-  width: 1.7rem;
-  padding: 0 8px;
-  
-  display: flex;
-  justify-content: flex-end;
-}
-
-.twitter-icon {
-
-  height: 1.7rem;
-  width: 1.7rem;
-  padding: 0 8px;
-  cursor:pointer;
-}
-
-.nav-buttons:hover {
-  color: #bd0707;
-}
-*/
 #container {
   display: flex;
   align-items: center;
@@ -218,17 +127,12 @@ section#home-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15rem;
-  width: 15rem;
+  height: 9rem;
+  width: 9rem;
   background-repeat: no-repeat;
   font-size: 1.5em;
 }
 
-/* .home-items a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-} */
 .home-items:hover {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.923);

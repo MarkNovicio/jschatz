@@ -20,6 +20,22 @@
 <body>
     <div class = "container">
         <div class = "form-container">
+            <div class="header-courses">
+                <div class="header">
+                  <div class="left-header"> 
+                    <a class = "btn" href = "/">Home</a> 
+                    <a class="btn" href="/about">About </a>
+                    <a class="btn" href="/contact">Contact</a>
+                </div>
+        
+                  <div class="right-header">
+                  <p class="login-user">
+                    WELCOME {{user.first_name}} {{user.last_name}}! 
+                  </p>
+                  <a id="log-out" href="/user/logout">Log Off</a>
+                </div>
+                </div>
+              </div>
         <div class = "title-container">
             <div class = "title-container-left">
                 <h1 class= "form-title">Sign up Now! </h1>

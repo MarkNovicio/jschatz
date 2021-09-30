@@ -13,7 +13,9 @@
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+
 }
+
 .title-container{
   display: flex;
   justify-content: space-between;
@@ -51,6 +53,7 @@ h1.form-title{
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  background-color: rgba(82, 82, 82, 0.5);
 }
 
 .left-header {
@@ -169,11 +172,13 @@ a.link {
     background: url(/static/images/macbook_grey_wallpaper.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
     position:fixed;
     width: 100%;
     height: 100%;
+    
   }
+
+ 
 
 .login-container{
   margin: 0;
@@ -192,10 +197,26 @@ a.link {
   font-size: 1.4rem;
   margin-bottom: 30px;
   padding-right: 7px;
+  margin-right: 15px;
 
 }
+
+.left-header .btn:hover{
+  color: #257C9E;
+  font-weight: bolder;
+}
+
+a.btn::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
   .background-color {
-    background-color: rgba(32, 32, 32, 0.4);
+    background-color: rgba(32, 32, 32, 0.8);
   }
 
 .password-container{
