@@ -14,22 +14,21 @@ div.body-container {
   width: 100%;
     height: 100%;
 }
-.header {
+.index-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-header{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
 }
 
 .left-header {
   display: flex;
   justify-content: space-around;
   padding-left: 30px;
-}
-
-.right-header {
-  display: flex;
-  justify-content: space-around;
-  margin-right: 30px;
 }
 
 .left-header .btn {
@@ -39,23 +38,21 @@ div.body-container {
   margin-bottom: 30px;
   padding-right: 7px;
   margin-right: 15px;
+
+}
+
+.left-header .btn:hover{
+  color: #257C9E;
+  font-weight: bolder;
 }
 
 a.btn::before {
+  display: block;
   content: attr(title);
   font-weight: bold;
   height: 0;
   overflow: hidden;
   visibility: hidden;
-}
-
-p.login-user{
-  color: #fff;
-  margin-right: 20px;
-}
-a#log-out{
-  color:#fff;
-  text-decoration: none;
 }
 
 #header-logo {
