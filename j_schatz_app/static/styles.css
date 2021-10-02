@@ -55,6 +55,25 @@ a.btn::before {
   visibility: hidden;
 }
 
+.right-header {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+
+p.login-user{
+  color: #fff;
+  margin-right: 20px;
+}
+a.register-button:link {
+  color: #fff;border-top: none;
+  text-decoration: none;
+
+}
+a#log-out{
+  text-decoration: none;
+  color: #fff;
+}
 #header-logo {
   height: 10rem;
   width: 10rem;
@@ -62,6 +81,9 @@ a.btn::before {
   border-radius: 50%;
 }
 
+.contact-header-container{
+  margin-bottom: 50px;
+}
 div#hero-image-container {
   display: flex;
   align-items: center;
