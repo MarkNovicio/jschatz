@@ -23,6 +23,7 @@ div.body-container {
 .contact-header{
   display: flex;
   justify-content: space-between;
+  background-color: rgba(123,123,123, .4);
 }
 
 .left-header {
@@ -100,6 +101,16 @@ div#hero-image-container ul {
   width: 50%;
   padding-left: 10%;
 }
+
+h1.title {
+  color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;	
+  text-align: center;
+  font-weight: bold;
+  margin: 30px auto 15px auto;
+}
+
 /*
 ul .hero-first-name,
 ul .hero-last-name {

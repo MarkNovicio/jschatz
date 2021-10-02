@@ -106,9 +106,8 @@ def code_publisher(request, publisher_id):
 
 def delete_challenge(request,challenge_id):
     del_challenge = CodeChallenge.objects.get(id=challenge_id)
-    if del_challenge.id == request.session['user_id']:
+    if del_challenge.publisher.id == request.session['user_id']:
         del_challenge.delete()
-    
     return redirect('/post_challenge/challenges')
 
 def update_user(request):
