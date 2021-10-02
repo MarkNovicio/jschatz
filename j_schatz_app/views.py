@@ -14,10 +14,14 @@ def login(request):
     return render(request, "login.html")
 
 def contact(request):
-    
-    return render(request, "contact.html")
+    if 'user_id' in request.session:
+        context = {
+            "user": User.objects.get(id = request.session['user_id'])
+        }
+    return render(request, "contact.html", context)
 
 def submit_user_message(request):
+
     errors = UserMessage.objects.basic_validator(request.POST)
     if len(errors) > 0:
         for key, value in errors.items():
