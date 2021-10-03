@@ -47,6 +47,8 @@ div.body-container {
   font-weight: bolder;
 }
 
+/*Rename the class*/
+/*  
 a.btn::before {
   display: block;
   content: attr(title);
@@ -55,7 +57,7 @@ a.btn::before {
   overflow: hidden;
   visibility: hidden;
 }
-
+*/
 .right-header {
   display: flex;
   justify-content: space-around;
@@ -287,6 +289,14 @@ textarea {
   bottom: 0;
 }
 
+a.btn::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 #footer-section p {
   margin-top: 0px;
 }
@@ -297,9 +307,20 @@ input[type="text"] {
 }
 
 .form-name {
-  color: white;
+  color: #fff;
   margin-bottom: 1.5%;
 }
+
+.challenge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  gap: 60px;
+  color: #fff;
+}
+
 
 @media (max-width: 2079px) {
 }
