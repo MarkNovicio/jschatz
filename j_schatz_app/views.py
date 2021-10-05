@@ -30,24 +30,25 @@ def submit_user_message(request):
         return redirect('/contact')
 
     if request.method == "POST":
-        user = UserMessage.objects.create(
-            username = request.POST['username'],
-            email = request.POST['email'],
-            message = request.POST['message']
-        )
+        username = request.POST['username']
+        email = request.POST['email']
+        message = request.POST['message']
+
         ### Send an email
         send_mail(
-            user.username , #subject
-            user.message , #message
-            user.email , # from email
-            ['marknovicio@gmail.com'], # To Email
-            fail_silently=False)
+            username , #subject
+            message , #message
+            email, # from email
+            ['th3arclearningcenter@gmail.com'], # To Email
+            fail_silently=False
+            )
+
 
         
-        request.session['username'] = user.username
-        request.session['email']= user.email
-        request.session['message']= user.message
-        return render(request, 'sent_email.html', {'username': user.username})
+       ##request.session['username'] = user.username
+        ##request.session['email']= user.email
+       ## request.session['message']= user.message
+        return render(request, 'sent_email.html', {'username': username})
     
 def success_page(request):
     # if 'user_id' not in request.session:
