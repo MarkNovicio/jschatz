@@ -21,12 +21,26 @@
 
 <body>
     <div class="body-container">
-        <div class = "home-button">
-            <a class ="home" href="/">Home</a>
+      <div class="header-courses">
+        <div class="sent-email-header">
+          <div class="left-header"> 
+            <a class = "btn" title="Home" href = "/">Home</a> 
+            <a class="btn" title="About" href="/about">About </a>
+            <a class="btn" title="Post Challenge" href="/success"> Post Challenge</a>
+            <a class="btn" title="Contact" href="/contact">Contact</a>
         </div>
+
+          <div class="right-header">
+          <p class="login-user">
+            Signed In: {{user.first_name}} {{user.last_name}}! 
+          </p>
+          <a id="log-out" href="/user/logout">Log Off</a>
+        </div>
+        </div>
+      </div>
         <center>
-            <h2>Thanks {{username}}!</h2>
-            <p>Appreciate you sending me a message!</p>
+            <h2 class="sent-mail-username">Thanks {{username}}!</h2>
+            <p class="sent-mail-message">Appreciate you sending me a message!</p>
         </center>
     </div>
 
