@@ -32,7 +32,7 @@
 
           <div class="right-header">
           <p class="login-user">
-            Signed In: {{user.first_name}} {{user.last_name}}! 
+            Signed In: {{request.session.user_id}} {{user.last_name}}!
           </p>
           <a id="log-out" href="/user/logout">Log Off</a>
         </div>

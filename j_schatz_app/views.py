@@ -21,10 +21,7 @@ def contact(request):
     return render(request, "contact.html", context)
 
 def submit_user_message(request):
-    if 'user_id' in request.session:
-        context = {
-            "user": User.objects.get(id = request.session['user_id'])
-        }
+
     errors = UserMessage.objects.basic_validator(request.POST)
     if len(errors) > 0:
         for key, value in errors.items():
@@ -44,14 +41,11 @@ def submit_user_message(request):
             email, # from email
             ['th3arclearningcenter@gmail.com'], # To Email
             fail_silently=False
-            )
-
-
-        
+            )  
        ##request.session['username'] = user.username
         ##request.session['email']= user.email
        ## request.session['message']= user.message
-        return render(request, 'sent_email.html', {'username': username}, context)
+        return render(request, 'sent_email.html', {'username': username})
     
 def success_page(request):
     # if 'user_id' not in request.session:
