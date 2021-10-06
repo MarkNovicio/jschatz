@@ -20,10 +20,11 @@ div.body-container {
   justify-content: space-between;
 }
 
-.contact-header{
+.contact-header, .sent-email-header{
   display: flex;
   justify-content: space-between;
   background-color: rgba(123,123,123, .4);
+  margin-bottom: 50px;
 }
 
 .left-header {
@@ -321,6 +322,9 @@ input[type="text"] {
   color: #fff;
 }
 
+.sent-mail-username, .sent-mail-message {
+color: #fff;
+}
 
 @media (max-width: 2079px) {
 }
