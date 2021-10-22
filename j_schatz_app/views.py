@@ -48,9 +48,6 @@ def submit_user_message(request):
         return render(request, 'sent_email.html', {'username': username})
     
 def success_page(request):
-    # if 'user_id' not in request.session:
-    #     messages.error(request, "Please log in.")
-    #     return redirect('/user/login')
 
     if 'user_id' in request.session:
         context = {
